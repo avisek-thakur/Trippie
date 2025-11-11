@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #FFFFFF;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 297px;
+  background: #EDF2F4;
+  border-radius: 48px;
+  height: 100vh;
+  padding: 40px 25px;
+  position: fixed;
+  margin: 10px 0 10px 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2B2D42;
+}
+
+.plane {
+  font-size: 36px;
+}
+
+.nav-links {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.nav-links li {
+  margin-bottom: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2B2D42;
+  padding: 8px 14px;
+  display: block;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.nav-links li.active a,
+.nav-links a:hover {
+  background: #2B2D42;
+  color: #FFFFFF;
+}
+
+.logout-btn {
+  background: #EF233C;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  padding: 12px 46px;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 45px;
+  left: 48px;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  margin-left: 320px;
+  padding-top: 40px;
+  padding-bottom: 90px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: calc(100% - 350px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page Header */
+.page-header {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2B2D42;
+  margin-bottom: 0.5rem;
+}
+
+/* TABLE CONTAINER */
+.bookings-table-container {
+  width: 984px;
+  background: #EDF2F4;
+  border-radius: 30px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: none;
+  margin-top: 10px;
+}
+
+/* The header is a separate row so we can keep its rounded corners clean */
+.table-header-row {
+  display: grid;
+  grid-template-columns: 80px 230px 150px 158px 176px 190px;
+  align-items: center;
+  background: #2B2D42;
+  color: #FFFFFF;
+  padding: 0 0;
+  height: 49px;
+  border-radius: 30px 30px 0 0;
+  font-weight: 700;
+  font-size: 24px;
+  border-bottom: 1px solid #000000;
+}
+
+/* vertical lines between header columns */
+.table-header-row > .header-cell {
+  padding-left: 12px;
+  border-right: 1px solid #2B2D42;
+}
+.table-header-row > .header-cell:last-child {
+  border-right: none;
+}
+
+/* header cell vertical alignment */
+.header-cell { 
+  padding-left: 12px; 
+}
+
+/* Table body wrapper (scrollable if many rows) */
+.table-body-wrapper {
+  overflow: auto;
+  max-height: 650px;
+  border-radius: 0 0 30px 30px;
+  background: transparent;
+}
+
+/* Actual table for body rows */
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: 100%;
+}
+
+/* Body rows grid columns match header */
+.bookings-table tbody tr {
+  display: grid;
+  grid-template-columns: 80px 230px 150px 158px 176px 190px;
+  align-items: center;
+  min-height: 55px;
+}
+
+/* Body cell style */
+.bookings-table td {
+  padding: 14px 12px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2B2D42;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  background: #FFFFFF;
+}
+
+.bookings-table td:last-child {
+  border-right: none;
+}
+
+/* Alternating background */
+.bookings-table tbody tr:nth-child(odd) td {
+  background: #f0f4f6;
+}
+
+/* Remove border bottom of last row for clean rounded bottom */
+.bookings-table tbody tr:last-child td { 
+  border-bottom: none; 
+}
+
+/* S.N. column left padding for visually similar spacing */
+.bookings-table td:first-child { 
+  text-align: center; 
+  padding-left: 0; 
+}
+
+/* Pagination area */
+.table-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+}
+
+.pagination-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.arrow-prev { 
+  background: #2B2D42; 
+  color: #EDF2F4; 
+  border-radius: 10px 0 0 10px; 
+}
+.arrow-next { 
+  background: #2B2D42; 
+  color: #EDF2F4; 
+  border-radius: 0 10px 10px 0; 
+}
+.pagination-page-number {
+  width: 32px;
+  height: 32px;
+  background: #EDF2F4; 
+  color: #2B2D42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2B2D42;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 1100px) {
+  .bookings-table-container { 
+    width: 92%; 
+  }
+  .table-header-row, 
+  .bookings-table tbody tr { 
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr; 
+    font-size: 14px; 
+  }
+  
+  .main {
+    margin-left: 320px;
+    padding: 40px 20px;
+    width: calc(100% - 350px);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .main {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .bookings-table-container {
+    width: 100%;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+}

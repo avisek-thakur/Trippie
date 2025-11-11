@@ -1,0 +1,220 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #FFFFFF;
+}
+
+/* NAVBAR - Standardized */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 3rem;
+}
+
+/* Avatar Dropdown - Standardized */
+.avatar {
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+}
+.avatar-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: white;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    width: 160px;
+    padding: 0.5rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 176px;
+}
+.avatar-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.menu-item {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    width: 90%;
+}
+.menu-item:hover {
+    background: #2B2D42;
+    color: white;
+}
+.avatar-menu button {
+    background: #EF233C;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 75%;
+}
+.avatar-menu button:hover {
+    background: #A41728;
+}
+#homeLogo {
+    cursor: pointer;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-top: 60px; /* Consistent with sticky navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* RECENT BOOKING */
+.recent-booking {
+    text-align: center;
+    width: 811px; /* same as table width */
+}
+
+.recent-booking h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-card {
+    background: #EDF2F4;
+    border-radius: 15px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking-card span {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2B2D42;
+}
+
+/* ACTIVITY TABLE */
+.activity-table-container {
+    width: 811px;
+    background: #EDF2F4;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TABLE HEADER */
+.table-header {
+    width: 100%;
+    height: 49px;
+    background: #2B2D42;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 24px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.table-header .th {
+    flex: 1;
+    text-align: center;
+}
+
+/* TABLE BODY */
+.table-body {
+    width: 100%;
+    max-height: 653px; /* 702px total - 49px header */
+    overflow-y: auto;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-bottom: 1px solid #000000;
+}
+
+.table-row .td {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2B2D42;
+}
+
+/* Scrollbar styling for table body */
+.table-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-body::-webkit-scrollbar-thumb {
+    background-color: #2B2D42;
+    border-radius: 4px;
+}
+
+.table-body::-webkit-scrollbar-track {
+    background: #EDF2F4;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .recent-booking,
+    .activity-table-container {
+        width: 95%;
+    }
+    
+    .table-header {
+        font-size: 18px;
+    }
+    
+    .table-row .td {
+        font-size: 14px;
+    }
+    
+    .main-content {
+        margin-top: 60px;
+        gap: 20px;
+    }
+}

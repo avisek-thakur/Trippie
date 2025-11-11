@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Bookings</title>
+  <link rel="stylesheet" href="managebookings.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="logo">
+      <span class="plane">✈️</span>
+      <span class="logo-text">Activity Booking</span>
+    </div>
+    <hr>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li class="active"><a href="managebookings.html">Manage Bookings</a></li>
+      <li><a href="manageactivities.html">Manage Activity</a></li>
+      <li><a href="newactivity.html">New Activity</a></li>
+      <li><a href="manageadminprofile.html">Manage Profile</a></li>
+    </ul>
+    <button id="logoutBtn" class="logout-btn">Log Out</button>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="main">
+    <!-- Title -->
+    <header class="page-header">
+      <h2 class="page-title">Manage Bookings</h2>
+    </header>
+
+    <!-- Bookings Table -->
+    <section class="bookings-table-container" aria-labelledby="bookingsHeading">
+      <!-- Header bar (rounded) -->
+      <div class="table-header-row" role="presentation">
+        <div class="header-cell sn">S.N.</div>
+        <div class="header-cell activity">Name</div>
+        <div class="header-cell date">Date</div>
+        <div class="header-cell time">Time</div>
+        <div class="header-cell bookedby">Booked By</div>
+        <div class="header-cell slots">No of Slots</div>
+      </div>
+
+      <!-- Table body (scrollable if many rows) -->
+      <div class="table-body-wrapper">
+        <table class="bookings-table" id="bookingsTable" aria-describedby="bookingsHeading">
+          <tbody id="bookingTableBody">
+            <!-- JS populates rows here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="table-pagination" id="pagination">
+        <button class="pagination-btn arrow-prev" id="prevPage" aria-label="Previous page">&lt;</button>
+        <div class="pagination-page-number" id="currentPage">1</div>
+        <button class="pagination-btn arrow-next" id="nextPage" aria-label="Next page">&gt;</button>
+      </div>
+    </section>
+  </section>
+
+  <script src="managebookings.js"></script>
+</body>
+</html>

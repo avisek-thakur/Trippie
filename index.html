@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Only</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      background: #FFFFFF;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 3rem;
+      width: 100%;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+
+    .nav-title {
+      font-size: 1.125rem;
+      font-weight: bold;
+    }
+
+    /* Avatar Dropdown */
+    .avatar {
+      border-radius: 50%;
+      cursor: pointer;
+      height: 2rem;
+      width: 2rem;
+    }
+    
+    .avatar-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 0.5rem;
+      background: white;
+      border-radius: 0 0 1rem 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      width: 160px;
+      padding: 0.5rem;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 176px;
+    }
+    
+    .avatar-menu.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .menu-item {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      text-align: center;
+      border-radius: 0.5rem;
+      width: 90%;
+    }
+    
+    .menu-item:hover {
+      background: #2B2D42;
+      color: white;
+    }
+    
+    .avatar-menu button {
+      background: #EF233C;
+      color: white;
+      border: none;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 75%;
+    }
+    
+    .avatar-menu button:hover {
+      background: #A41728;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="nav-left" id="homeLogo">
+    <span style="font-size: 1.5rem;">✈️</span>
+    <h1 class="nav-title">Activity Booking</h1>
+  </div>
+
+  <div class="relative">
+    <img
+      class="avatar"
+      src="https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png"
+      alt="avatar"
+      id="avatarBtn"
+    />
+    <div class="avatar-menu" id="avatarMenu">
+      <div class="menu-item" id="manageProfileBtn">Manage profile</div>
+      <div class="menu-item" id="viewBookingBtn">View Booking</div>
+      <button id="logoutBtn">Log Out</button>
+    </div>
+  </div>
+</nav>
+
+<script>
+// Avatar dropdown
+const avatarBtn = document.getElementById("avatarBtn");
+const avatarMenu = document.getElementById("avatarMenu");
+avatarBtn.addEventListener("click", () => {
+  avatarMenu.classList.toggle("show");
+});
+
+// Navigation functionality
+const homeLogo = document.getElementById("homeLogo");
+const manageProfileBtn = document.getElementById("manageProfileBtn");
+const viewBookingBtn = document.getElementById("viewBookingBtn");
+const logoutBtn = document.getElementById("logoutBtn");
+
+homeLogo.addEventListener("click", () => {
+  window.location.href = "homepage.html";
+});
+
+manageProfileBtn.addEventListener("click", () => {
+  window.location.href = "manageprofile.html";
+});
+
+viewBookingBtn.addEventListener("click", () => {
+  window.location.href = "recentbook.html";
+});
+
+logoutBtn.addEventListener("click", () => {
+  window.location.href = "login.html";
+});
+</script>
+
+</body>
+</html>

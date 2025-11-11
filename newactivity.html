@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Activity</title>
+  <link rel="stylesheet" href="newactivity.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="logo">
+      <span class="plane">✈️</span>
+      <span class="logo-text">Activity Booking</span>
+    </div>
+    <hr>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="managebookings.html">Manage Bookings</a></li>
+      <li><a href="manageactivities.html">Manage Activity</a></li>
+      <li class="active"><a href="newactivity.html">New Activity</a></li>
+      <li><a href="manageadminprofile.html">Manage Profile</a></li>
+    </ul>
+    <button id="logoutBtn" class="logout-btn">Log Out</button>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="main">
+
+    <div class="image-section">
+      <div class="image-large" id="imgPreviewMain"></div>
+
+      <div class="image-row">
+        <div class="img-box" id="imgPreview1"></div>
+        <div class="img-box" id="imgPreview2"></div>
+        <div class="img-box" id="imgPreview3"></div>
+      </div>
+
+      <input type="file" id="imageInput" accept="image/*" style="display: none;">
+    </div>
+
+    <form class="activity-form" id="activityForm">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter the name of the activity">
+      </div>
+
+      <div class="field">
+        <label>Price</label>
+        <input type="number" id="price" placeholder="Enter the price">
+      </div>
+
+      <div class="field">
+        <label>Description</label>
+        <textarea id="description" placeholder="Enter the description"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Number of Slots</label>
+        <input type="number" id="slots" placeholder="Enter the number of slots available per activity">
+      </div>
+
+      <div class="field">
+        <label>Duration</label>
+        <input type="text" id="duration" placeholder="Enter the duration">
+      </div>
+
+      <div class="field">
+        <label>Location</label>
+        <input type="text" id="location" placeholder="Enter the location">
+      </div>
+
+      <button type="submit" class="create-btn">Create</button>
+    </form>
+  </section>
+
+<script src="newactivity.js"></script>
+</body>
+</html>

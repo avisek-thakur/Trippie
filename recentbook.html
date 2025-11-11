@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Booking Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="recentbook.css">
+</head>
+<body class="bg-white">
+
+  <!-- NAVBAR (Same as manageprofile.html) -->
+  <nav class="w-screen h-12 bg-white flex justify-between items-center px-8 shadow-sm fixed top-0 left-0 z-50">
+    <div class="flex items-center gap-3 cursor-pointer" id="homeLogo">
+      <span class="text-xl">✈️</span>
+      <h1 class="font-bold text-lg">Activity Booking</h1>
+    </div>
+
+    <div class="relative flex flex-col items-center">
+      <img
+        class="h-8 w-8 cursor-pointer avatar rounded-full"
+        src="https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png"
+        alt="avatar"
+      />
+      <div
+        class="avatar-menu absolute p-2 bg-white opacity-0 rounded-b-xl flex flex-col items-center justify-around shadow"
+      >
+        <div class="menu-item w-[90%] py-2 text-center rounded-xl hover:bg-[#2B2D42] hover:text-white cursor-pointer" id="manageProfileBtn">Manage profile</div>
+        <div class="menu-item w-[90%] py-2 text-center rounded-xl hover:bg-[#2B2D42] hover:text-white cursor-pointer" id="viewBookingBtn">View Booking</div>
+        <button class="bg-[#EF233C] hover:bg-[#A41728] text-white w-3/4 rounded-2xl py-2" id="logoutBtn">Log Out</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <!-- Recent Booking -->
+    <div class="recent-booking">
+      <h2>Recent Booking</h2>
+    </div>
+
+    <!-- Activity Table -->
+    <div class="activity-table-container">
+      <div class="table-header">
+        <span class="th sn">S.N.</span>
+        <span class="th name">Name</span>
+        <span class="th date">Date</span>
+        <span class="th time">Time</span>
+        <span class="th slots">No of Slots</span>
+      </div>
+      <div class="table-body" id="table-body">
+        <!-- Rows populated dynamically -->
+      </div>
+    </div>
+
+  </div>
+
+  <script src="recentbook.js"></script>
+</body>
+</html>

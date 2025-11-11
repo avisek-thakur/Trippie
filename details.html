@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Details</title>
+  <link rel="stylesheet" href="details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo" id="homeLogo">
+      <span>✈️</span> Activity Booking
+    </div>
+    <div class="avatar-container">
+      <img src="https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png" alt="User" class="avatar" id="avatarBtn">
+      <div class="avatar-menu" id="avatarMenu">
+        <div class="menu-item" id="manageProfileBtn">Manage profile</div>
+        <div class="menu-item" id="viewBookingBtn">View Booking</div>
+        <button id="logoutBtn">Log Out</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="activity-container">
+    <!-- Left Image Gallery -->
+    <div class="image-gallery">
+      <div class="main-image">
+        <img src="" alt="Activity Image" id="mainImage">
+      </div>
+      <div class="thumbnails-grid" id="thumbnailContainer">
+        <!-- Thumbnails will be dynamically generated -->
+      </div>
+    </div>
+
+    <!-- Right Activity Details -->
+    <div class="details">
+      <h1 id="activityTitle">Loading...</h1>
+      <p class="location" id="activityLocation">
+        <span class="location-text">Loading...</span>
+        <span class="view-location">View Full Location</span>
+      </p>
+      <p class="rating" id="activityRating">
+        <!-- Single star will be dynamically generated -->
+      </p>
+      <p class="description" id="activityDescription">
+        Loading...
+      </p>
+      <div class="tags" id="activityTags">
+        <!-- Tags will be dynamically generated -->
+      </div>
+      <div class="check-availability-container">
+        <button class="check-btn" id="openSlots">
+          <span class="check-text">Check</span>
+          <span class="availability-text">Availability</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Ratings & Reviews -->
+  <section class="reviews">
+    <h2>Ratings & Reviews</h2>
+    <div id="reviewsContainer">
+      <!-- Reviews will be dynamically generated -->
+    </div>
+  </section>
+
+  <!-- AVAILABILITY POPUP OVERLAY -->
+  <div id="slotOverlay" class="overlay">
+    <div class="popup">
+      <!-- CLOSE CROSS -->
+      <div class="close" id="closeOverlay"></div>
+      <h2 class="popup-title">Available Slots</h2>
+      <div id="slotsContainer">
+        <!-- Slots will be dynamically generated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK SLOT FORM POPUP -->
+  <div id="bookSlotOverlay" class="overlay">
+    <div class="book-popup">
+      <div class="close" id="closeBookPopup"></div>
+      <h2 class="popup-title">Book Slots</h2>
+
+      <p id="selectedTime" class="selected-time"></p>
+
+      <label class="field-label">No of Slots</label>
+      <input type="number" id="slotInput" class="field-input" placeholder="Enter the number of slot you are booking for">
+
+      <p id="slotsRemainingText" class="slots-remaining"></p>
+
+      <label class="field-label">Extra Information (Optional)</label>
+      <textarea id="extraInfo" class="field-textarea" placeholder="Tell us any extra information you want us to know"></textarea>
+
+      <div class="btn-row">
+        <button id="cancelBook" class="cancel-btn">Cancel</button>
+        <button id="confirmBook" class="confirm-btn">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="details.js"></script>
+</body>
+</html>

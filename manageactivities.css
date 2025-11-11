@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #FFFFFF;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 297px;
+  background: #EDF2F4;
+  border-radius: 48px;
+  height: 100vh;
+  padding: 40px 25px;
+  position: fixed;
+  margin: 10px 0 10px 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2B2D42;
+}
+
+.plane {
+  font-size: 36px;
+}
+
+.nav-links {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.nav-links li {
+  margin-bottom: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2B2D42;
+  padding: 8px 14px;
+  display: block;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.nav-links li.active a,
+.nav-links a:hover {
+  background: #2B2D42;
+  color: #FFFFFF;
+}
+
+.logout-btn {
+  background: #EF233C;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  padding: 12px 46px;
+  border-radius: 16px;
+  position: absolute;
+  bottom: 45px;
+  left: 48px;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  margin-left: 320px;
+  padding-top: 40px;
+  padding-bottom: 90px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: calc(100% - 350px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page Header */
+.page-header {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2B2D42;
+  margin-bottom: 0.5rem;
+}
+
+/* Content Container */
+.content-container {
+  width: 984px;
+  background: #EDF2F4;
+  border-radius: 30px;
+  padding: 36px 48px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin: 0 auto;
+  text-align: center;
+  color: #2B2D42;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 1100px) {
+  .content-container {
+    width: 92%;
+    margin: 0 auto;
+  }
+  
+  .main {
+    margin-left: 320px;
+    padding: 40px 20px;
+    width: calc(100% - 350px);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .main {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .content-container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+}

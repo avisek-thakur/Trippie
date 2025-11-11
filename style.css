@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #FFFFFF;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  color: #EF233C;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2B2D42;
+  margin-left: 15px;
+}
+
+.menu {
+  margin-left: auto;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu .line {
+  width: 21px;
+  height: 3px;
+  background: #FFFFFF;
+}
+
+.profile img {
+  width: 35px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Main Content */
+.main-content {
+  padding: 120px 50px 50px 50px;
+}
+
+.main-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2B2D42;
+  margin-bottom: 30px;
+}
+
+/* Activities Container */
+.activities-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Activity Card */
+.activity-card {
+  width: 300px;
+  background: #EDF2F4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.activity-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.activity-card .content {
+  padding: 15px;
+}
+
+.activity-card .content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2B2D42;
+}
+
+.activity-card .content p {
+  font-size: 14px;
+  color: #2B2D42;
+  line-height: 1.4;
+}
+/* ------------------------
+   Card Container
+------------------------ */
+.card {
+  position: relative; /* container relative for absolute children */
+  width: 345px;
+  height: 330px;
+  margin: 20px; /* spacing between cards */
+  border-radius: 38px;
+  background: #D9D9D9;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Banner Image */
+.card .banner {
+  width: 100%;
+  height: 277px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ------------------------
+   Description Box
+------------------------ */
+.card .description {
+  position: absolute;
+  width: 90%; /* responsive width */
+  bottom: 60px;
+  left: 10px;
+}
+
+/* Activity Name */
+.card .description .activity-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2B2D42;
+  margin-bottom: 5px;
+}
+
+/* Location */
+.card .description .location {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+/* ------------------------
+   Rating Box
+------------------------ */
+.card .rating {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  right: 10px;
+  bottom: 10px;
+  background: #FFFFFF;
+  border-radius: 23.5px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 5px;
+}
+
+/* Star */
+.card .rating .star {
+  width: 28px;
+  height: 26px;
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+/* Rating Text */
+.card .rating .rating-text {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  color: #2B2D42;
+}
+
+/* ------------------------
+   Addon / Badge (optional)
+------------------------ */
+.card .addon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #FF6B6B;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: 700;
+  border-radius: 15px;
+  font-size: 12px;
+  line-height: 14px;
+}

@@ -1,0 +1,280 @@
+/* Manage Profile styles - Improved spacing and centering */
+
+/* Page base */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;
+  background: #fff;
+  margin: 0;
+}
+
+/* Navbar - Standardized */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 3rem;
+}
+
+/* Avatar Dropdown - Standardized */
+.avatar {
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+}
+.avatar-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  width: 160px;
+  padding: 0.5rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 176px;
+}
+.avatar-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.menu-item {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  width: 90%;
+}
+.menu-item:hover {
+  background: #2B2D42;
+  color: white;
+}
+.avatar-menu button {
+  background: #EF233C;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 75%;
+}
+.avatar-menu button:hover {
+  background: #A41728;
+}
+#homeLogo {
+  cursor: pointer;
+}
+
+
+/* Profile card container - Improved centering and spacing */
+.profile-card {
+  position: relative;
+  width: 984px;
+  height: 578px;
+  background: #EDF2F4;
+  border-radius: 30px;
+  padding: 36px 48px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin: 0 auto;
+}
+
+/* Left column (form) */
+.form-col {
+  padding-top: 20px;
+}
+.field {
+  margin-bottom: 22px;
+}
+.field label {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #000;
+}
+.field input {
+  width: 376px;
+  height: 46px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.12);
+  color: #2b2d42;
+  font-size: 15px;
+  transition: box-shadow 0.2s ease;
+}
+.field input:focus {
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+/* Right column (avatar + password) */
+.side-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-top: 20px;
+}
+.avatar-circle {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: #D9D9D9;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.avatar-circle:hover {
+  transform: scale(1.02);
+}
+.tap-text {
+  color: #EF233C;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* Password field */
+.pw-field {
+  margin-top: 25px;
+  width: 100%;
+}
+.pw-field label {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.pw-field input {
+  width: 312px;
+  height: 46px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.12);
+  transition: box-shadow 0.2s ease;
+}
+.pw-field input:focus {
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+/* Buttons positioned bottom-right */
+.actions {
+  position: absolute;
+  right: 70px;
+  bottom: 48px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.btn-cancel {
+  width: 188px;
+  height: 42px;
+  background: #8D99AE;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn-cancel:hover {
+  background: #7a8699;
+}
+.btn-save {
+  width: 166px;
+  height: 42px;
+  background: #EF233C;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.btn-save:hover {
+  background: #D90429;
+}
+
+
+/* Improved spacing for the main layout */
+header.py-10 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+main.flex.justify-center.pb-24.relative {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+/* Responsive fallback */
+@media (max-width: 1100px) {
+  .profile-card {
+    width: 92%;
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-bottom: 90px;
+    margin: 0 auto;
+  }
+  .form-col .field input {
+    width: 100%;
+    max-width: 520px;
+  }
+  .pw-field input {
+    width: 100%;
+    max-width: 520px;
+  }
+  .actions {
+    position: static;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  
+  header.py-10 {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* Additional improvements for better visual hierarchy */
+h2.text-4xl.font-extrabold.text-center {
+  margin-bottom: 0.5rem;
+}
+
+/* Ensure the main container has proper spacing */
+body > main {
+  min-height: calc(100vh - 200px);
+}

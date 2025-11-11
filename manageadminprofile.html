@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Admin Profile</title>
+  <link rel="stylesheet" href="manageadminprofile.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="logo">
+      <span class="plane">✈️</span>
+      <span class="logo-text">Activity Booking</span>
+    </div>
+    <hr>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="managebookings.html">Manage Bookings</a></li>
+      <li><a href="manageactivities.html">Manage Activity</a></li>
+      <li><a href="newactivity.html">New Activity</a></li>
+      <li class="active"><a href="manageadminprofile.html">Manage Profile</a></li>
+    </ul>
+    <button id="logoutBtn" class="logout-btn">Log Out</button>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="main">
+    <!-- Title -->
+    <header class="page-header">
+      <h2 class="page-title" >Manage Profile</h2>
+    </header>
+
+    <!-- Profile Card -->
+    <div class="profile-container">
+      <div class="profile-card">
+        <!-- Left column: form fields -->
+        <div class="form-col">
+          <div class="field">
+            <label for="firstName">First Name</label>
+            <input id="firstName" type="text" placeholder="First name" />
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" type="text" placeholder="Last name" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="text" placeholder="Phone number" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="example@example.com" />
+          </div>
+        </div>
+
+        <!-- Right column: avatar + password + image upload -->
+        <div class="side-col">
+          <div class="avatar-circle" id="profilePicture"></div>
+          <div class="tap-text">Tap To Profile Picture</div>
+
+          <!-- Image Upload Section -->
+          <div class="image-upload-section">
+            <div class="image-large" id="imgPreviewMain"></div>
+            <div class="image-row">
+              <div class="img-box" id="imgPreview1"></div>
+              <div class="img-box" id="imgPreview2"></div>
+              <div class="img-box" id="imgPreview3"></div>
+            </div>
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+          </div>
+
+          <div class="pw-field">
+            <label for="password">Change Your Password</label>
+            <input id="password" type="password" placeholder="••••••••••••••••" />
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+          <button id="cancelBtn" class="btn-cancel">Cancel</button>
+          <button id="saveBtn" class="btn-save">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="manageadminprofile.js"></script>
+</body>
+</html>
